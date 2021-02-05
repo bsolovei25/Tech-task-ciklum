@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../styles/style.css"/>  
+    <meta charset="utf-8" />
+    <title>Getting Started</title>
+  </head>
+  <body>
+    <div class="row headerblock" style="margin-top: 3%;">
+        <div class="col-8"><h2>Calendar<h2></div>
+        <div class="col-2">
+          <select class="custom-select" id="meetingMadeFor">
+            <option value="All">All</option>
+            <option value="Maria">Maria</option>
+            <option value="Petro">Petro</option>
+            <option value="Oleg">Oleg</option>
+          </select>
+        </div>
+      <div class="col-2">
+        <button class="btn btn-outline-secondary" id = "createMeetingButton"type="button">Create Meeting</button>
+      </div>
+    </div>
+
+    <table class="table table-bordered" style="margin-top: 5%;">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Mon</th>
+          <th scope="col">Tue</th>
+          <th scope="col">Wed</th>
+          <th scope="col">Thu</th>
+          <th scope="col">Fri</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">10:00</th>
+          <td class = "Monday"></td>
+          <td class = "Tuesday"></td>
+          <td class = "Wednsday"></td>
+          <td class = "Thursday"></td>
+          <td class = "Friday"></td>
+        </tr>
+        <tr>
+          <th scope="row">11:00</th>
+          <td class = "Monday"></td>
+          <td class = "Tuesday"></td>
+          <td class = "Wednsday"></td>
+          <td class = "Thursday"></td>
+          <td class = "Friday"></td>
+        </tr>
+        <tr>
+          <th scope="row">12:00</th>
+          <td class = "Monday"></td>
+          <td class = "Tuesday"></td>
+          <td class = "Wednsday"></td>
+          <td class = "Thursday"></td>
+          <td class = "Friday"></td>
+        </tr>
+        <tr>
+          <th scope="row">13:00</th>
+          <td class = "Monday"></td>
+          <td class = "Tuesday"></td>
+          <td class = "Wednsday"></td>
+          <td class = "Thursday"></td>
+          <td class = "Friday"></td>
+        </tr>
+        <tr>
+          <th scope="row">14:00</th>
+          <td class = "Monday"></td>
+          <td class = "Tuesday"></td>
+          <td class = "Wednsday"></td>
+          <td class = "Thursday"></td>
+          <td class = "Friday"></td>
+        </tr>
+        <tr>
+          <th scope="row">15:00</th>
+          <td class = "Monday"></td>
+          <td class = "Tuesday"></td>
+          <td class = "Wednsday"></td>
+          <td class = "Thursday"></td>
+          <td class = "Friday"></td>
+        </tr>
+        <tr>
+          <th scope="row">16:00</th>
+          <td class = "Monday"></td>
+          <td class = "Tuesday"></td>
+          <td class = "Wednsday"></td>
+          <td class = "Thursday"></td>
+          <td class = "Friday"></td>
+        </tr>
+        <tr>
+          <th scope="row">17:00</th>
+          <td class = "Monday"></td>
+          <td class = "Tuesday"></td>
+          <td class = "Wednsday"></td>
+          <td class = "Thursday"></td>
+          <td class = "Friday"></td>
+        </tr>
+        <tr>
+          <th scope="row">18:00</th>
+          <td class = "Monday"></td>
+          <td class = "Tuesday"></td>
+          <td class = "Wednsday"></td>
+          <td class = "Thursday"></td>
+          <td class = "Friday"></td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal end -->
+    <div class="col" id = "CreateMeatingid" style="display: none;">
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Name of th event</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="inputEventName" placeholder="Event">
+        </div>
+      </div>
+      <div class="row">
+        <label class="col-sm-2 col-form-label">Participants</label>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <select class="selectpicker" multiple data-live-search="true">
+                <option>Maria</option>
+                <option>Petro</option>
+                <option>Oleg</option>
+              </select>
+            </div>
+          </div>
+      </div>
+      <div class="row">
+        <label class="col-sm-2 col-form-label">Day </label>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <select class="form-control" id = "dayofweek">
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednsday">Wednsday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <label class="col-sm-2 col-form-label">Time </label>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <select class="form-control" id = "timeofmeeting">
+              <option value="10:00" >10:00</option>
+              <option value="11:00">11:00</option>
+              <option value="12:00">12:00</option>
+              <option value="13:00">13:00</option>
+              <option value="14:00">14:00</option>
+              <option value="15:00">15:00</option>
+              <option value="16:00">16:00</option>
+              <option value="17:00">17:00</option>
+              <option value="18:00">18:00</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <button type="button" class="btn btn-default" onclick="location.reload();">Cancel</button>
+        <button type="button" class="btn btn-default" id = "AddtoLocal">Create</button>
+      </div>
+  </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>-->
+    <script src="../src/index.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

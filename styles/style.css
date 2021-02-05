@@ -1,0 +1,15 @@
+.form-group label {
+    float: left !important;
+    text-align: left!important;
+    font-weight: normal!important;
+}
+
+
+.form-group select {
+    display: inline-block!important;
+    width: auto!important;
+    vertical-align: middle!important;
+    
+}
+
+
