@@ -70,9 +70,9 @@ document.getElementById('AddtoLocal').addEventListener('click',function(){
     var meeting = new Meeting(event_name,meeting_day,meeting_time,user)
     saveObj(meeting)
   }
-  /*else{
+  else{
     alert('Failed to create the event. Slot has already been taken')
-  }*/
+  }
 })
 
 
