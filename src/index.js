@@ -99,6 +99,7 @@ function saveObj(object){
   arrofMeetings.push(object)
   // Put the object into storage
   localStorage.setItem('SetofMeetings', JSON.stringify(arrofMeetings));
+  location.reload();
 
 }
 
